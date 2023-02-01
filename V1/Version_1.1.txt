@@ -1,0 +1,12 @@
+VERSION 1.1
+Fecha 27 / 11 / 22
+----------------------
+
+-Chat multihilos
+-Verificacion nombre cliente (no se puede repetir)
+-Comando invitacion a jugar
+BATTLESHIP Mario
+-Aceptado o rechazado de invitacion
+-Lista de las partidas activas del cliente (no se puede jugar con el mismo 2 partidas)
+-Vistazo de tablero
+-Llenado de buques por cordenadas
