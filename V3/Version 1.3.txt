@@ -1,0 +1,13 @@
+Version 1.3
+Fecha 30 / 11 / 22
+----------------------
+
+-Agregado casillas adyacentes arriba y abajo con *
+-Al construir un barco se da el tipo,posicion y coordenada (5 H C1)
+-No permite construir un barco sobre otro ni adyacente a el
+-Al no escribir los parametros correctos solo envia mensaje de error (ya no vuelve a mostrar todo el trablero y menu de barcos)
+-Agregado el comando "JUGADORES" para despegar a los clientes activos
+
+
+--ERROR
+--Solo comprueba casilla adyacente * cuando se construye barco, por lo que alcanza a construir las piezas de la nave hasta que topa con *.
