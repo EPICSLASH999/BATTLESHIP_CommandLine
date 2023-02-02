@@ -1,0 +1,13 @@
+Version 1.6
+Fecha 01 / 12 / 22
+----------------------
+
+--Pasado Clases Barco y TableroO a paquete "tableros"
+--Establecer la "IP" y el "PUERTO" como args[]
+--Mitigada la desconexion de un cliente/jugador
+	-Si no esta jugando, simplemente se sale de la lista estatica del servidor
+	-Si esta jugando, se elimina de todas las listas de juego activas de los clientes con los que se encontraba jugando
+
+
+--ERROR ENCONTRADO
+Al desconectarse UnCliente se queda ejecutando infinitamente el ciclo while(true)
