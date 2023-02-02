@@ -1,0 +1,46 @@
+Version 1.10
+03 / 12 / 22
+---------------
+
+CARACTERISTICAS AGREGADAS
+
+--El Servidor ahora dice que cliente se desconectó.
+--Si nunca se acepta la invitacion a jugar, la misma expira.
+--Ahora dice con quien se finalizó partida.
+--Decir "Comando no reconocido." desde UnCliente si no fue ninguno del modoComando().
+--Si el servidor se desconecta, los clientes se desconectan.
+--Cuando un cliente se desconecta, imprime mensaje de despedida.
+
+------------------------------------------------------------------------------------
+MEJORAS
+
+Cambiados ifs a switch
+Código comentado.
+Código eficientizado.
+Eliminada lista de barcos inecesaria de Clase TableroO.
+
+------------------------------------------------------------------------------------
+ERRORES
+
+-ERROR ENCONTRADO
+Si pone numero o mayuscula diferente a {"S","N"} al momento de recibir invitacion.
+ERROR SOLUCIONADO
+Solucion: ParaEnviar, si la parte[0] de lo escrito solo tiene una letra, regresa un false. Lo que inicia el metodo de deslock().
+
+--ERROR ENCONTRADO.
+--Si C3 envia invitacion a C1 que mando invitacion a C2 y no le ha respondido.
+C1 recibe que esta ocupado, y no deberia ser asi. Deberia ser C3 quien lo reciba.
+--Y SOLUCIONADO
+--Si C3 envia invitacion a C1 que mando invitacion a C2 y no le ha respondido.
+Se le dice a C3 que C1 esta ocupado.
+
+--ERROR ENCONTRADO
+--Si C1 manda solicitud de juego, no debe escribir mensajes; eso arruina el programa.
+--Y SOLUCIONADO
+--Si C1 manda solicitud de juego, no debe escribir mensajes.
+Ya no pasa nada al enviar mensajes despues de enviar una solicitud de juego.
+
+-ERROR ENCONTRADO
+Al construir barcos, enviar solicitud de juego a otro.
+SOLUCION: El comando BATTLESHIP comprueba si se esta en lock para si mismo y no deja proseguir.
+
