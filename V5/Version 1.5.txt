@@ -1,0 +1,16 @@
+Version 1.5
+Fecha 01 / 12 / 22
+----------------------
+
+--Agregado de Comandos de TORTA y ENEMIGO
+--El primer turno ahora es aleatorio (anteriormente empezaba el que invitaba a jugar)
+--casillasDisponibles de "TableroO" volvio a un valor de 30
+
+
+--ERROR SOLUCIONADO
+--No se puede escribir el comando BATTLE mientras se crean barcos propios.
+SOLUCION: Serciorarse de que ambos tableros se encuentren listos antes de proceder con el comando BATTLE
+
+--ERROR SOLUCIONADO
+--Si C1 y C2 estan creando tablero, y C3 (quien tiene partida con C1) escribe el comando BATTLE con C1, el mensaje se interpone con la creacion del tablero de C1.
+SOLUCION: No permitir que avance el comando BATTLE si el cliente esta en lock.
