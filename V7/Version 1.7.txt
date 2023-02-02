@@ -1,0 +1,25 @@
+Version 1.7
+Fecha 02 / 12 / 22
+----------------------
+
+--Agregado comando PARTIDAS ACTIVAS para ver, bueno, las partidas activas...
+--Optimización de método quitarEspFinal (ParaEnviar) con .trim() al mensaje/comando entero para evitar espacios finales
+--Limpieza de código y optimización de parámetros o asignaciónes inútiles.
+
+
+--ERROR MITIGADO
+Al desconectarse UnCliente ya no se queda ejecutando infinitamente el ciclo while(true). El ciclo se detiene (lo que ya no consume recursos), pero el objeto sigue existiendo (espacio en memoria).
+MITIGACION: Ahora el ciclo se da con un booleano "ciclo" el cual al desconectarse pasa a ser false y ya no se repite.
+
+--ERROR MITIGADO
+	-Si C1 y C2 estan construyendo tablero, y C3 (quien tiene partida activa con C1) se quiere rendir.
+	No le permite rendirse y le dice que lo reconsidere.
+	-Si C1 y C2 estan construyendo tablero y alguno se quiere rendir, no lo toma como comando.
+
+--ERROR MITIGADO
+	-Si el servidor se desconecta...
+	El cliente, al enviar un mensaje le avisa el estado del servidor y luego lo desconecta a el (System.exit(0);)
+
+--ERROR MITIGADO
+	-Si cliente C1 y C2 estan creando tablero, y C1 escribe comando BATTLE a C3 con quien tiene partida.
+	No entra el comando BATTLE y lo toma como dato de ingreso de contruccion de barco erroneo.
