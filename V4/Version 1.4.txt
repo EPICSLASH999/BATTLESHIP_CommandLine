@@ -1,0 +1,37 @@
+Version 1.4
+Fecha 01 / 12 / 22
+----------------------
+
+
+--Los mensajes privados en estado de lock @cliente dice que se encuentra ocupado
+--Reemplazar atributos de Barco casillaInicial y casillaFinal con .getCasillaInicial() y .getCasillaFinal()
+--Tener un arrayList con las casillas y obtener valor con .get() | Clase Barco
+--Agregado metodo en "TableroO" calcularColumna(String coord)
+--Separacion de creacion de casillasAdyacentes "*" en Verticales y Laterales al barco "TableroO"
+--Agregado de casillas adyacentes de esquina "*"
+--Finalizado el método de llenado de casillasAdyacentes() "TableroO"
+--No se permite crear barcos junto a casillas adyacentes de otro barco
+--Para imprimir tablero, si es * que se imprima como "-" (oceano) | .getTablero() de "TableroO"
+--Mitigar parametros de tamaño, posicion y coordenada (10C, CC, C, C.1,c,c-2) de Seleccion | comprobarParametros() "ParaRecibir"
+--Agregado de booleanos listo (por si ya termino de colocar sus barcos) y esTurno | clase TableroO
+--Agregado ArrayList de casillasRestantes a clase Barco
+--Método de Tiro(coordenada) para tirar en tablero contrario 
+--Checar si casilla es "X" o "+" para "ya tiro ahi". | TableroO
+--Checar casillas en clase Barco para saber si todas las casillas estan tumbadas para "Hundido"
+--Creación del TableroT o tablero de registro de tiros propios. El mismo en un paquete diferente llamado "tableros"
+--ArrayList de Barcos se van removiendo por ¡Hundido! hasta que no quede ninguno; en ese caso hay un vencedor.
+--Mitigar parametros de comando "BATTLE Jesus A1"; en la coordenada (a1, 1a, aa, 11)
+--Mensaje de ocupado al mandar solicitud de juego y el otro se encuentra en construccion de tablero.
+--Opcion de rendirse
+--Al finalizar una partida se le manda al servidor el puntaje (+3 si es victoria | + 0 si se rinde)
+--Comando GANADORES para ver puntajes
+--casillasDisponibles de "TableroO" pasó a ser de 1 para testeo
+
+--ERROR SOLUCIONADO
+--Pasar la comprobacion de no poner barco en * cuando se comprueban casillas y no cuando se construye barco.
+
+--ERROR ENCONTRADO
+--Colocar el comando BATTLE mientras se crean barcos propios.
+
+--ERROR ENCONTRADO
+--Si C1 y C2 estan creando tablero, y C3 (quien tiene partida con C1) escribe el comando BATTLE con C1, el mensaje se interpone con la creacion del tablero de C1.
