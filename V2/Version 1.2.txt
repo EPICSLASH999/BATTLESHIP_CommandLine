@@ -1,0 +1,11 @@
+Version 1.2
+Fecha 30 / 11 / 22
+----------------------
+
+-Tablero pasado a verse en cliente
+-Solo permite s/n al preguntar (ciclo)
+-Menu de seleccion de barcos
+-Tablero agregado a Hashmap
+-Lock para si mismo
+-Primero checa las casillas antes de crear el barco, si excede el tablero no se crea.
+-Solo se puede enviar el comando "BATTLESHIP" con 2 argumentos (prevenir una ventana de fallo en el programa al trabajar con un comando automatico de envio de 3 parametros)
