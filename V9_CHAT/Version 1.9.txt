@@ -1,0 +1,6 @@
+Version 1.9
+Fecha 02 / 12 / 22
+----------------------
+
+
+--Booleano para activar chat, sino solo es juego BATTLESHIP
